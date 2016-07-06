@@ -30,7 +30,7 @@ def hmac_validate(award_code, hash):
         if 'handler' in session:
             return "Award %d to badge %d" % (award_id, badge_id)
         else:
-            return "GOOD"
+            return "BRING ME TO A HANDLER IN THE SUITE."
 
 @app.route('/c/wQELM3NFTBmbuOFVwatNHYAxni6kX/mhPwg4HvnzB5RyLJ/GIVEMECOOKIES')
 def drop_cookie():
