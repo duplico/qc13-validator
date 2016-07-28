@@ -27,14 +27,21 @@ def hmac_validate(award_code, hash):
     if not award_is_good:
         return "BAD"
     else:
-        if 'handler' in session:
+        if 'handler' in session and session['handler'] == 'MxEUeLxDo0nYnNqAC7gbz6okuAaYK3yAvvUxD4sZwr9xeYovNAt5YBfh6c99n5h':
             return "Award %d to badge %d" % (award_id, badge_id)
         else:
             return "BRING ME TO A HANDLER IN THE SUITE."
 
+@app.route('/ul/SsJqV5whmcRU1jBNEpcD/EVENTME')
+def show_password():
+    if session.get('handler', None) == 'MxEUeLxDo0nYnNqAC7gbz6okuAaYK3yAvvUxD4sZwr9xeYovNAt5YBfh6c99n5h':
+        return '<h1><pre>EVQAXIII</pre></h1>'
+    else:
+        return 'REWARD FOR RETURN - QUEERCON - GEORGE - @duplico - 918-289-2458'
+            
 @app.route('/c/wQELM3NFTBmbuOFVwatNHYAxni6kX/mhPwg4HvnzB5RyLJ/GIVEMECOOKIES')
 def drop_cookie():
-    session['handler'] = 'yes'
+    session['handler'] = 'MxEUeLxDo0nYnNqAC7gbz6okuAaYK3yAvvUxD4sZwr9xeYovNAt5YBfh6c99n5h'
     return '''<PRE><B>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .---. .---.&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp;&nbsp; : o&nbsp;&nbsp; :&nbsp;&nbsp;&nbsp; me want cookie!
